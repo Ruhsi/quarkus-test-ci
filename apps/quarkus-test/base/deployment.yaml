@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quarkus-test-deployment
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: quarkus-test
+        image: ghcr.io/Ruhsi/quarkus-test:latest
+        ports:
+        - containerPort: 8080
